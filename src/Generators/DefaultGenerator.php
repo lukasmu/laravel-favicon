@@ -30,7 +30,7 @@ class DefaultGenerator extends FaviconGenerator
 
         // Then generate the text
         $spacing = 2*($this->getMargin()+$this->getPadding());
-        $max = max($this->getHeight(), $this->getWidth())-$spacing;
+        $max = max($this->getHeight(), $this->getWidth());
         if (config('favicon.image_driver') === 'imagick') {
             $text = new ImagickFont($this->getText());
         } else {

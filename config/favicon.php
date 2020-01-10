@@ -28,7 +28,7 @@ return [
     'color' => env('FAVICON_COLOR', '#ffffff'),
     'background-color' => env('FAVION_BACKGROUND_COLOR', '#007bff'),
     'margin' => env('FAVICON_MARGIN', 5),
-    'padding' =>  env('FAVICON_PADDING', 2),
+    'padding' =>  env('FAVICON_PADDING', 15),
     'border-radius' => env('FAVICON_BORDER_RADIUS', 20),
 
     /*
