@@ -16,7 +16,7 @@ Route::namespace('\Aerdes\LaravelFavicon\Http\Controllers')->name('favicons.')->
 
     Route::get('manifest.json', 'FaviconController@manifest')->name('manifest');
 
-    Route::get('browserconfg.xml', 'FaviconController@browserconfg')->name('browserconfg');
+    Route::get('browserconfig.xml', 'FaviconController@browserconfig')->name('browserconfig');
 
 });
 

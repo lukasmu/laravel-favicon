@@ -5,12 +5,24 @@ namespace Aerdes\LaravelFavicon\Http\Controllers;
 class FaviconController
 {
 
+    /**
+     * Return the actual favicon
+     *
+     * @param int $width
+     * @param int $height
+     * @return \Illuminate\Http\Response
+     */
     public function png(int $width=32, int $height=32) {
         $class = config('favicon.generator');
         $generator = new $class($width, $height);
         return $generator->generate();
     }
 
+    /**
+     * Returns the manifest for Chrome, Firefox, ...
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function manifest() {
         $sizes = collect([48, 96, 192, 512]);
         $array = [
@@ -25,8 +37,14 @@ class FaviconController
         return response()->json($array);
     }
 
-    public function browserconfg() {
-        $content = view('favicon::browserconfg')->render();
+    /**
+     * Returns the browserconfig for IE
+     *
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     * @throws \Throwable
+     */
+    public function browserconfig() {
+        $content = view('favicon::browserconfig')->render();
         return response($content)->header('Content-Type', 'application/xml');
     }
 
