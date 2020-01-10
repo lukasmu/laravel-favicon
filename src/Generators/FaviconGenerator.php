@@ -7,7 +7,6 @@ use Intervention\Image\ImageManager;
 
 abstract class FaviconGenerator
 {
-
     protected $manager;
     protected $width;
     protected $height;
@@ -55,17 +54,16 @@ abstract class FaviconGenerator
 
     protected function getPadding(): int
     {
-        return round(config('favicon.padding')*min($this->height, $this->width)/100);
+        return round(config('favicon.padding') * min($this->height, $this->width) / 100);
     }
 
     protected function getMargin(): int
     {
-        return round(config('favicon.margin')*min($this->height, $this->width)/100);
+        return round(config('favicon.margin') * min($this->height, $this->width) / 100);
     }
 
     protected function getBorderRadius(): int
     {
-        return round(config('favicon.border-radius')*min($this->height, $this->width)/100);
+        return round(config('favicon.border-radius') * min($this->height, $this->width) / 100);
     }
-
 }

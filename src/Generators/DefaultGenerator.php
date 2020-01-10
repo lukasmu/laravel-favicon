@@ -8,28 +8,27 @@ use Intervention\Image\Imagick\Font as ImagickFont;
 
 class DefaultGenerator extends FaviconGenerator
 {
-
     public function generate(): Response
     {
         // First generate the background
         $x1 = $this->getMargin();
-        $x2 = $this->getWidth()-$this->getMargin();
+        $x2 = $this->getWidth() - $this->getMargin();
         $y1 = $x1;
-        $y2 = $this->getHeight()-$this->getMargin();
+        $y2 = $this->getHeight() - $this->getMargin();
         $radius = $this->getBorderRadius();
         $background_call = function ($draw) {
             $draw->background($this->getBackgroundColor());
         };
         $background = $this->manager->canvas($this->getWidth(), $this->getHeight());
-        $background->rectangle($x1+$radius, $y1, $x2-$radius, $y2, $background_call);
-        $background->rectangle($x1, $y1+$radius, $x2, $y2-$radius, $background_call);
-        $background->ellipse($radius*2, $radius*2, $x1+$radius, $y1+$radius, $background_call);
-        $background->ellipse($radius*2, $radius*2, $x2-$radius, $y1+$radius, $background_call);
-        $background->ellipse($radius*2, $radius*2, $x1+$radius, $y2-$radius, $background_call);
-        $background->ellipse($radius*2, $radius*2, $x2-$radius, $y2-$radius, $background_call);
+        $background->rectangle($x1 + $radius, $y1, $x2 - $radius, $y2, $background_call);
+        $background->rectangle($x1, $y1 + $radius, $x2, $y2 - $radius, $background_call);
+        $background->ellipse($radius * 2, $radius * 2, $x1 + $radius, $y1 + $radius, $background_call);
+        $background->ellipse($radius * 2, $radius * 2, $x2 - $radius, $y1 + $radius, $background_call);
+        $background->ellipse($radius * 2, $radius * 2, $x1 + $radius, $y2 - $radius, $background_call);
+        $background->ellipse($radius * 2, $radius * 2, $x2 - $radius, $y2 - $radius, $background_call);
 
         // Then generate the text
-        $spacing = 2*($this->getMargin()+$this->getPadding());
+        $spacing = 2 * ($this->getMargin() + $this->getPadding());
         $max = max($this->getHeight(), $this->getWidth());
         if (config('favicon.image_driver') === 'imagick') {
             $text = new ImagickFont($this->getText());
@@ -53,9 +52,8 @@ class DefaultGenerator extends FaviconGenerator
         // Finally merge background and text
         $output = $this->manager->canvas($this->getWidth(), $this->getHeight());
         $output->insert($background);
-        $output->insert($foreground, 'center-center', $spacing/2);
+        $output->insert($foreground, 'center-center', $spacing / 2);
 
         return $output->response('png');
     }
-
 }
