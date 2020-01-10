@@ -5,10 +5,10 @@ use Orchestra\Testbench\BrowserKit\TestCase;
 
 class FaviconTest extends TestCase
 {
-
     protected function getPackageProviders($app)
     {
         putenv('FAVICON_FONT='.base_path('../../../../resources/fonts/Roboto-Regular.ttf'));
+
         return [
             'Aerdes\LaravelFavicon\FaviconServiceProvider',
         ];
@@ -40,7 +40,7 @@ class FaviconTest extends TestCase
                         'sizes',
                         'type',
                     ],
-                ]
+                ],
             ]);
     }
 
@@ -48,5 +48,4 @@ class FaviconTest extends TestCase
     {
         $this->visitRoute('favicons.browserconfig')->assertResponseOk();
     }
-
 }

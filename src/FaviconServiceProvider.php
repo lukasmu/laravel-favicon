@@ -37,6 +37,5 @@ class FaviconServiceProvider extends ServiceProvider
     {
         // Merging the config
         $this->mergeConfigFrom(__DIR__.'/../config/favicon.php', 'favicon');
-
     }
 }
