@@ -7,7 +7,7 @@ class FaviconTest extends TestCase
 {
     protected function getPackageProviders($app)
     {
-        putenv('FAVICON_FONT='.base_path('../../../../resources/fonts/Roboto-Regular.ttf'));
+        putenv('FAVICON_FONT='.__DIR__.'/../resources/fonts/Roboto-Regular.ttf');
 
         return [
             'Aerdes\LaravelFavicon\FaviconServiceProvider',
