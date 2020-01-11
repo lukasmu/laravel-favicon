@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aerdes/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/aerdes/laravel-favicon)
 [![Build Status](https://img.shields.io/travis/aerdes/laravel-favicon/master.svg?style=flat-square)](https://travis-ci.org/aerdes/laravel-favicon)
-[![Quality Score](https://bitbucket.styleci.io/repos/689837508714524457/shield?branch=master)](https://bitbucket.styleci.io/repos/689837508714524457)
+[![Quality Score](https://github.styleci.io/repos/233151342/shield?branch=master)](https://github.styleci.io/repos/233151342)
 [![Total Downloads](https://img.shields.io/packagist/dt/aerdes/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/aerdes/laravel-favicon)
 
 This package can be used to quickly generate customized and high-quality favicons for your Laravel application. The images are generated on the fly for different platforms and display resolutions. Usage is super simple and just requires including a view in your templates (see below).

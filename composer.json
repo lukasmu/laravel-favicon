@@ -9,7 +9,7 @@
         "tile",
         "apple-touch-icon"
     ],
-    "homepage": "https://bitbucket.org/aerdes/laravel-favicon",
+    "homepage": "https://github.com/aerdes/laravel-favicon",
     "license": "MIT",
     "type": "library",
     "authors": [
