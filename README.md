@@ -1,7 +1,7 @@
 # Add pretty favicons to your Laravel application on the fly
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aerdes/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/aerdes/laravel-favicon)
-[![Build Status](https://img.shields.io/travis/aerdes/laravel-favicon/master.svg?style=flat-square)](https://travis-ci.org/aerdes/laravel-favicon)
+[![Build Status](https://img.shields.io/travis/aerdes/laravel-favicon/master.svg?style=flat-square)](https://travis-ci.com/github/aerdes/laravel-favicon)
 [![Quality Score](https://github.styleci.io/repos/233151342/shield?branch=master)](https://github.styleci.io/repos/233151342)
 [![Total Downloads](https://img.shields.io/packagist/dt/aerdes/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/aerdes/laravel-favicon)
 
