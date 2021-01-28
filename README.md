@@ -1,8 +1,8 @@
 # Add pretty favicons to your Laravel application on the fly
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aerdes/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/aerdes/laravel-favicon)
-[![Build Status](https://img.shields.io/travis/aerdes/laravel-favicon/master.svg?style=flat-square)](https://travis-ci.com/github/aerdes/laravel-favicon)
-[![Quality Score](https://github.styleci.io/repos/233151342/shield?branch=master)](https://github.styleci.io/repos/233151342)
+[![Build Status](https://img.shields.io/travis/aerdes/laravel-favicon/main.svg?style=flat-square)](https://travis-ci.com/github/aerdes/laravel-favicon)
+[![Quality Score](https://github.styleci.io/repos/233151342/shield?branch=main)](https://github.styleci.io/repos/233151342)
 [![Total Downloads](https://img.shields.io/packagist/dt/aerdes/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/aerdes/laravel-favicon)
 
 This package can be used to quickly generate customized and high-quality favicons for your Laravel application. The images are generated on the fly for different platforms and display resolutions. Usage is super simple and just requires including a view in your templates (see below).
@@ -66,7 +66,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email [lukas@aerdes.com](mailto:lukas@aerdes.com) instead of using the issue tracker.
+If you discover any security related issues, please email [hello@lukasmu.com](hello@lukasmu.com) instead of using the issue tracker.
 
 ## Postcardware
 

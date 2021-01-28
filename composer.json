@@ -15,12 +15,13 @@
     "authors": [
         {
             "name": "Lukas Müller",
-            "email": "lukas@aerdes.com",
+            "email": "hello@lukasmu.com",
+            "homepage": "https://lukasmu.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.3|^8.0",
         "ext-gd": "*",
         "intervention/image": "^2.4.2",
         "laravel/framework": "^6.0|^7.0|^8.0"
