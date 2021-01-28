@@ -1,5 +1,5 @@
 {
-    "name": "aerdes/laravel-favicon",
+    "name": "lukasmu/laravel-favicon",
     "description": "Add pretty favicons to your Laravel application on the fly",
     "keywords": [
         "icon",
@@ -9,7 +9,7 @@
         "tile",
         "apple-touch-icon"
     ],
-    "homepage": "https://github.com/aerdes/laravel-favicon",
+    "homepage": "https://github.com/lukasmu/laravel-favicon",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -32,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Aerdes\\LaravelFavicon\\": "src"
+            "LukasMu\\Favicon\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Aerdes\\LaravelFavicon\\Tests\\": "tests"
+            "LukasMu\\Favicon\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,7 +50,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Aerdes\\LaravelFavicon\\FaviconServiceProvider"
+                "LukasMu\\Favicon\\FaviconServiceProvider"
             ]
         }
     }

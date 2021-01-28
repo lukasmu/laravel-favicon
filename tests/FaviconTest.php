@@ -10,7 +10,7 @@ class FaviconTest extends TestCase
         putenv('FAVICON_FONT='.__DIR__.'/../resources/fonts/Roboto-Regular.ttf');
 
         return [
-            'Aerdes\LaravelFavicon\FaviconServiceProvider',
+            'LukasMu\Favicon\FaviconServiceProvider',
         ];
     }
 

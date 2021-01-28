@@ -1,6 +1,6 @@
 <?php
 
-namespace Aerdes\LaravelFavicon\Http\Controllers;
+namespace LukasMu\Favicon\Http\Controllers;
 
 class FaviconController
 {

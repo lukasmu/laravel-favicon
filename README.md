@@ -1,9 +1,9 @@
 # Add pretty favicons to your Laravel application on the fly
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/aerdes/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/aerdes/laravel-favicon)
-[![Build Status](https://img.shields.io/travis/aerdes/laravel-favicon/main.svg?style=flat-square)](https://travis-ci.com/github/aerdes/laravel-favicon)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/lukasmu/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/lukasmu/laravel-favicon)
+[![Build Status](https://img.shields.io/travis/lukasmu/laravel-favicon/main.svg?style=flat-square)](https://travis-ci.com/github/lukasmu/laravel-favicon)
 [![Quality Score](https://github.styleci.io/repos/233151342/shield?branch=main)](https://github.styleci.io/repos/233151342)
-[![Total Downloads](https://img.shields.io/packagist/dt/aerdes/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/aerdes/laravel-favicon)
+[![Total Downloads](https://img.shields.io/packagist/dt/lukasmu/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/lukasmu/laravel-favicon)
 
 This package can be used to quickly generate customized and high-quality favicons for your Laravel application. The images are generated on the fly for different platforms and display resolutions. Usage is super simple and just requires including a view in your templates (see below).
 
@@ -14,7 +14,7 @@ Please note that this package is based on [beyondcode/laravel-favicon](https://p
 You can install the package via composer:
 
 ```bash
-composer require aerdes/laravel-favicon
+composer require lukasmu/laravel-favicon
 ```
 
 ## Usage
@@ -43,7 +43,7 @@ To add the icons to your site include the view ```favicon::head``` in the head s
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="Aerdes\LaravelFavicon\FaviconServiceProvider" --tag="config"
+php artisan vendor:publish --provider="LukasMu\Favicon\FaviconServiceProvider" --tag="config"
 ```
 
 Feel free to set the appropriate environmental variables (or edit the config file) in order to customize the favicons.

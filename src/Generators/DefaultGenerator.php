@@ -1,6 +1,6 @@
 <?php
 
-namespace Aerdes\LaravelFavicon\Generators;
+namespace LukasMu\Favicon\Generators;
 
 use Illuminate\Http\Response;
 use Intervention\Image\Gd\Font as GdFont;

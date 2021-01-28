@@ -9,7 +9,7 @@
 |
 */
 
-Route::namespace('\Aerdes\LaravelFavicon\Http\Controllers')->name('favicons.')->prefix('icons')->group(function () {
+Route::namespace('\LukasMu\Favicon\Http\Controllers')->name('favicons.')->prefix('icons')->group(function () {
     Route::get('favicon.png', 'FaviconController@png')->name('png');
     Route::get('favicon-{width}x{height}.png', 'FaviconController@png')->where('width', '[0-9]+')->where('height', '[0-9]+')->name('png_custom');
 

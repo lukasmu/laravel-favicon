@@ -1,6 +1,6 @@
 <?php
 
-namespace Aerdes\LaravelFavicon;
+namespace LukasMu\Favicon;
 
 use Illuminate\Support\ServiceProvider;
 

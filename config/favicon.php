@@ -24,7 +24,7 @@ return [
     */
 
     'font' => env('FAVICON_FONT',
-        base_path('vendor/aerdes/laravel-favicon/resources/fonts/Roboto-Regular.ttf')),
+        base_path('vendor/lukasmu/laravel-favicon/resources/fonts/Roboto-Regular.ttf')),
     'color' => env('FAVICON_COLOR', '#ffffff'),
     'background-color' => env('FAVICON_BACKGROUND_COLOR', '#007bff'),
     'margin' => env('FAVICON_MARGIN', 5),
@@ -44,6 +44,6 @@ return [
     */
 
     'image_driver' => 'gd',
-    'generator' => \Aerdes\LaravelFavicon\Generators\DefaultGenerator::class,
+    'generator' => \LukasMu\Favicon\Generators\DefaultGenerator::class,
 
 ];
