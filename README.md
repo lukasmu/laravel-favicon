@@ -1,9 +1,10 @@
 # Add pretty favicons to your Laravel application on the fly
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/lukasmu/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/lukasmu/laravel-favicon)
-[![Build Status](https://img.shields.io/travis/lukasmu/laravel-favicon/main.svg?style=flat-square)](https://travis-ci.com/github/lukasmu/laravel-favicon)
-[![Quality Score](https://github.styleci.io/repos/233151342/shield?branch=main)](https://github.styleci.io/repos/233151342)
-[![Total Downloads](https://img.shields.io/packagist/dt/lukasmu/laravel-favicon.svg?style=flat-square)](https://packagist.org/packages/lukasmu/laravel-favicon)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/lukasmu/laravel-favicon.svg)](https://packagist.org/packages/lukasmu/laravel-favicon)
+[![tests](https://github.com/lukasmu/laravel-favicon/actions/workflows/tests.yml/badge.svg)](https://github.com/lukasmu/laravel-favicon/actions/workflows/tests.yml)
+[![Quality Score](https://github.styleci.io/repos/233151342/shield?branch=main&style=flat)](https://github.styleci.io/repos/233151342)
+[![Total Downloads](https://img.shields.io/packagist/dt/lukasmu/laravel-favicon.svg)](https://packagist.org/packages/lukasmu/laravel-favicon)
+[![Coverage Status](https://coveralls.io/repos/github/lukasmu/laravel-favicon/badge.svg?branch=main)](https://coveralls.io/github/lukasmu/laravel-favicon?branch=main)
 
 This package can be used to quickly generate customized and high-quality favicons for your Laravel application. The images are generated on the fly for different platforms and display resolutions. Usage is super simple and just requires including a view in your templates (see below).
 
