@@ -7,8 +7,8 @@ class FaviconController
     /**
      * Return the actual favicon.
      *
-     * @param int $width
-     * @param int $height
+     * @param  int  $width
+     * @param  int  $height
      * @return \Illuminate\Http\Response
      */
     public function png(int $width = 32, int $height = 32)
@@ -44,6 +44,7 @@ class FaviconController
      * Returns the browserconfig for IE.
      *
      * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     *
      * @throws \Throwable
      */
     public function browserconfig()
