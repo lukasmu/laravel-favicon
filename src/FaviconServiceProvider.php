@@ -11,7 +11,6 @@ class FaviconServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
         // Loading the routes
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 
