@@ -2,55 +2,64 @@
 
 namespace LukasMu\Favicon\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Response as HttpResponse;
+use Illuminate\Support\Facades\Response;
+use LukasMu\Favicon\Facades\Favicon;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+
 class FaviconController
 {
     /**
-     * Return the actual favicon.
-     *
-     * @param  int  $width
-     * @param  int  $height
-     * @return \Illuminate\Http\Response
+     * Return the default favicon in the ICO format.
      */
-    public function png(int $width = 32, int $height = 32)
+    public function ico(int $width = 48, int $height = 48): BinaryFileResponse
     {
-        $class = config('favicon.generator');
-        $generator = new $class($width, $height);
+        $file = tempnam(sys_get_temp_dir(), 'favicon_').'.ico';
 
-        return $generator->generate();
+        $ico = Favicon::ico($width, $height);
+        $ico->save_ico($file);
+
+        return Response::file($file, [
+            'Content-Type' => 'image/x-icon',
+            'Content-Disposition' => 'inline; filename="favicon.ico"',
+        ])->deleteFileAfterSend(true);
     }
 
     /**
-     * Returns the manifest for Chrome, Firefox, ...
-     *
-     * @return \Illuminate\Http\JsonResponse
+     * Return the default favicon in the PNG format.
      */
-    public function manifest()
+    public function png(int $width = 48, int $height = 48, bool $maskable = false): HttpResponse
     {
-        $sizes = collect([48, 96, 192, 512]);
-        $array = [
-            'icons' => $sizes->map(function ($size) {
+        return Favicon::image($width, $height, $maskable)->response('png');
+    }
+
+    /**
+     * Return the maskable favicon in the PNG format.
+     */
+    public function maskable(int $width = 48, int $height = 48): HttpResponse
+    {
+        return $this->png($width, $height, true);
+    }
+
+    /**
+     * Return the web app manifest.
+     */
+    public function manifest(): JsonResponse
+    {
+        return Response::json([
+            'name' => config('app.name'),
+            'icons' => collect([192, 512])->map(function ($size) {
                 return [
-                    'src' => route('favicons.png_custom', ['width' => $size, 'height' => $size]),
-                    'sizes' => $size.'x'.$size,
+                    'src' => route('favicon.maskable', ['width' => $size, 'height' => $size]),
+                    'sizes' => "{$size}x{$size}",
                     'type' => 'image/png',
+                    'purpose' => 'maskable',
                 ];
             }),
-        ];
-
-        return response()->json($array);
-    }
-
-    /**
-     * Returns the browserconfig for IE.
-     *
-     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
-     *
-     * @throws \Throwable
-     */
-    public function browserconfig()
-    {
-        $content = view('favicon::browserconfig')->render();
-
-        return response($content)->header('Content-Type', 'application/xml');
+            'theme_color' => config('favicon.colors.theme'),
+            'background_color' => config('favicon.colors.background'),
+            'display' => 'standalone',
+        ]);
     }
 }

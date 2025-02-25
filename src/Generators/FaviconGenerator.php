@@ -2,25 +2,17 @@
 
 namespace LukasMu\Favicon\Generators;
 
-use Illuminate\Http\Response;
-use Intervention\Image\ImageManager;
+use Intervention\Image\Image;
 
 abstract class FaviconGenerator
 {
-    protected $manager;
-    protected $width;
-    protected $height;
+    public function __construct(
+        protected int $width,
+        protected int $height,
+        protected bool $maskable
+    ) {}
 
-    public function __construct(int $width, int $height)
-    {
-        $this->manager = new ImageManager([
-            'driver' => config('favicon.image_driver'),
-        ]);
-        $this->width = $width;
-        $this->height = $height;
-    }
-
-    abstract public function generate(): Response;
+    abstract public function image(): Image;
 
     protected function getWidth(): int
     {
@@ -30,6 +22,11 @@ abstract class FaviconGenerator
     protected function getHeight(): int
     {
         return $this->height;
+    }
+
+    protected function isMaskable(): bool
+    {
+        return $this->maskable;
     }
 
     protected function getText(): string
@@ -44,26 +41,26 @@ abstract class FaviconGenerator
 
     protected function getColor(): string
     {
-        return config('favicon.color');
+        return config('favicon.colors.text');
     }
 
     protected function getBackgroundColor(): string
     {
-        return config('favicon.background-color');
+        return config('favicon.colors.background');
     }
 
     protected function getPadding(): int
     {
-        return round(config('favicon.padding') * min($this->height, $this->width) / 100);
+        return intval(round(config('favicon.padding') * min($this->height, $this->width) / 100));
     }
 
     protected function getMargin(): int
     {
-        return round(config('favicon.margin') * min($this->height, $this->width) / 100);
+        return intval(round(config('favicon.margin') * min($this->height, $this->width) / 100));
     }
 
     protected function getBorderRadius(): int
     {
-        return round(config('favicon.border-radius') * min($this->height, $this->width) / 100);
+        return intval(round(config('favicon.border_radius') * min($this->height, $this->width) / 100));
     }
 }
