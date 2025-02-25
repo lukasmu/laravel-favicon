@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-favicon` will be documented in this file.
 
+## v2.0.0 - 2025-02-25
+
+- Modernize the entire package
+- Add support for Laravel 11 and 12
+- Drop support for outdated Laravel versions
+
+**Full Changelog**: https://github.com/lukasmu/laravel-favicon/compare/v1.0.6...v2.0.0
+
 ## v1.0.6 - 2023-04-20
 
 - Add support for Laravel 10
